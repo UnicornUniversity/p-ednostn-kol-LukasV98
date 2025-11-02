@@ -1,36 +1,31 @@
-//TODO add imports if needed
-//TODO doc
+import {Employees} from "./src/Employees/employees.js"
+
 /**
  * The main function which calls the application. 
- * Please, add specific description here for the application purpose.
+ * Please add a specific description here for the application purpose.
  * @param {object} dtoIn contains count of employees, age limit of employees {min, max}
  * @returns {object} containing the statistics
  */
 export function main(dtoIn) {
-  //TODO code
-  //let dtoOut = exMain(dtoIn);
-  return dtoOut;
+  const employees = new Employees();
+  return employees.describeEmployees(employees.generateEmployees(dtoIn));
 }
 
 /**
- * Please, add specific description here 
+ * Please add specific description here
  * @param {object} dtoIn contains count of employees, age limit of employees {min, max}
  * @returns {Array} of employees
  */
 export function generateEmployeeData(dtoIn) {
-  //TODO code
-  //let dtoOut = exGenerateEmployeeData(dtoIn);
-  return dtoOut;
+  return new Employees().generateEmployees(dtoIn);
 }
 
 /**
- * Please, add specific description here 
+ * Please add specific description here
  * @param {Array} employees containing all the mocked employee data
  * @returns {object} frequencies of the employee names
  */
 export function getEmployeeChartContent(employees) {
-  //TODO code
-  //let dtoOut = exgetEmployeeChartContent(employees);
-  return dtoOut;
+  return new Employees().describeEmployees(employees);
 }
 
